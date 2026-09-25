@@ -4,7 +4,7 @@
 
 <Publish>
     <!-- Mod ID must be 0 for publishing a mod for the first time.  Mod ID must be set in order to update an existing mod. -->
-    <ModId Value="0" />
+    <ModId Value="160585" />
 
     <!-- Name of the mod to display to players.  Copied from assembly Title. -->
     <DisplayName Value="Settings Search" />
@@ -33,7 +33,8 @@ I would like to declare that this mod was made with the assistance of AI, partic
     <Thumbnail Value="Properties/Thumbnail.png" />
 
     <!-- Screenshot.  Copied from Screenshots folder.  Include no spaces in file names.  Max file size is 2.1MB.  Can be set multiple times. -->
-    <Screenshot Value="Properties\Screenshots\search.png" />
+    <Screenshot Value="Properties\Screenshots\10.png" />
+    <Screenshot Value="Properties\Screenshots\20.png" />
 
 
     <!-- Tag.  Can be set multiple times. -->
@@ -43,7 +44,7 @@ I would like to declare that this mod was made with the assistance of AI, partic
     <ForumLink Value="https://forum.paradoxplaza.com/forum/threads/settings-search.1942690/" />
 
     <!-- Version of the mod.  Copied from assembly Version. -->
-    <ModVersion Value="1.0.0" />
+    <ModVersion Value="1.1.0" />
 
     <!-- Recommended version of the base game to use the mod. -->
     <GameVersion Value="1.*" />
@@ -57,7 +58,10 @@ I would like to declare that this mod was made with the assistance of AI, partic
 
     <!-- Change log.  Copied from ChangeLog.md file.  Supports minimal markdown subset. -->
     <ChangeLog>
-- Initial release
+- UI improvements
+- Updated the thumbnail to represent the UI improvements
+- Updated screenshots
+- Improved search logic
 </ChangeLog>
 
     <!-- External links.  Can be set multiple times. -->

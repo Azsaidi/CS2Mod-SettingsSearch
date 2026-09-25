@@ -1,1 +1,4 @@
-- Initial release
+- UI improvements
+- Updated the thumbnail to represent the UI improvements
+- Updated screenshots
+- Improved search logic

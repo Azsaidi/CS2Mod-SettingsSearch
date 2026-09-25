@@ -11,40 +11,21 @@ export const MIN_QUERY_LENGTH = 2;
 const TextInput = getModule("game-ui/common/input/text/text-input.tsx", "TextInput");
 const IconButton = getModule("game-ui/common/input/button/icon-button.tsx", "IconButton");
 const useTextInputTheme = getModule("game-ui/common/input/text/ellipsis-text-input/ellipsis-text-input-theme.tsx", "useTextInputTheme");
-const renderLocalized = getModule("game-ui/common/localization/localized.tsx", "renderLocalized");
 const searchClasses = getModule("game-ui/menu/components/options-screen/options-search.module.scss", "classes");
 
 const CLEAR_ICON = "Media/Glyphs/Clear.svg";
 
 export const InOptionsScreenContext = createContext(false);
 
-export interface OptionItem {
-    id: string;
-    displayName: any;
-    searchHidden?: boolean;
-}
-
 export interface OptionPage {
     id: string;
     builtIn: boolean;
-    sections: { id: string; items: OptionItem[] }[];
+    sections: unknown[];
 }
 
-const localize = (localization: Localization, value: any): string => {
-    try {
-        return renderLocalized(localization, value) ?? "";
-    } catch {
-        return value?.value ?? "";
-    }
-};
-
 export const pageMatches = (localization: Localization, page: OptionPage, query: string) => {
-    const needle = query.trim().toLowerCase();
     const name = localization.translate(`Options.SECTION[${page.id}]`) ?? page.id;
-    if (name.toLowerCase().includes(needle)) return true;
-    return page.sections.some((section) =>
-        section.items.some((item) => !item.searchHidden && localize(localization, item.displayName).toLowerCase().includes(needle))
-    );
+    return name.toLowerCase().includes(query.trim().toLowerCase());
 };
 
 export const useModPageVisible = (page: OptionPage, active: boolean) => {

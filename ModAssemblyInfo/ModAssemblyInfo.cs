@@ -10,7 +10,7 @@ namespace SettingsSearch
     public class ModAssemblyInfo
     {
         public const string Name        = "SettingsSearch";
-        public const string Version     = "1.0.0";
+        public const string Version     = "1.1.0";
         public const string Title       = "Settings Search";
         public const string Description = "Adds a search bar to the options menu to quickly find any mod's settings";
     }
