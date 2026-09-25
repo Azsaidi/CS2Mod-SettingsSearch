@@ -1,0 +1,9 @@
+<Project>
+
+	<PropertyGroup>
+		<_ModBuildRoot>$(LOCALAPPDATA)\CS2ModBuild\$(MSBuildProjectName)</_ModBuildRoot>
+		<BaseOutputPath>$(_ModBuildRoot)\bin\</BaseOutputPath>
+		<BaseIntermediateOutputPath>$(_ModBuildRoot)\obj\</BaseIntermediateOutputPath>
+	</PropertyGroup>
+
+</Project>
